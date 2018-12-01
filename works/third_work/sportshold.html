@@ -1,0 +1,911 @@
+<!--Author Amir_web-->
+<!--link => https://t.me/amir_web_developer-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sport_Hold</title>
+	<link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- <a href="https://t.me/amir_web_developer" class="my_tel_logo"><img src="img/amir_logo.png" alt="Author"></a>
+<style type="text/css">
+    .my_tel_logo{
+        float: right;
+        position: fixed;
+        width: 150px;
+        height: 50px;
+        background: rgba(255, 255, 255, .3);
+        left: 100%;
+        top: 100%;
+        transform: translate(-100%, -100%);
+        z-index: 500;
+        border-radius: 3px;
+    }
+
+    .my_tel_logo img{
+        width: 100%;
+        height: 100%;
+        filter: grayscale(.75);
+    }
+    
+    .my_tel_logo img:hover{
+        filter: grayscale(0); 
+    }
+
+    .my_tel_logo:hover{
+        box-shadow: 0 0 5px #324C5A;
+    }
+
+</style> -->
+
+	<header>
+		<div class="blog_sign">
+			<ul id="link_left" class="link_left">
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Delivery</a></li>
+				<li><a href="#">Legal</a></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+			<a id="link_left_bars"><i class="fas fa-bars"></i></a>
+			<ul id="link_right" class="link_right">
+				<li><img id="r_img" src="img/icons8-корзина-filled-50.png"> $465.00 <span> 4 Items</span></li>
+				<li><a data-toggle="modal" data-target="#exampleModalCenter" id="p_l">Login</a></li>
+				<li><a data-toggle="modal" data-target="#exampleModalLong" id="reg">Register</a></li>
+			</ul>
+		</div>
+
+		<div class="blog_menu">
+			<a href="https://amir-web.github.io/works/third_work/sportshold.html" class="logotype"><img src="img/logotype.png"></a>
+
+			<a id="min_menu_bars"><i class="fas fa-bars"></i></a>
+			<ul id="menu" class="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Men</a></li>
+				<li><a href="#">Women</a></li>
+				<li><a href="#">Children</a></li>
+				<li><a href="#">Baby</a></li>
+				<li><a href="#">Our Brands</a></li>
+				<li><a href="#">Sales</a></li>
+			</ul>
+		</div>
+
+		<div class="min_menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Men</a></li>
+				<li><a href="#">Women</a></li>
+				<li><a href="#">Children</a></li>
+				<li><a href="#">Baby</a></li>
+				<li><a href="#">Our Brands</a></li>
+				<li><a href="#">Sales</a></li>
+			</ul>
+		</div>
+
+		<div class="menu_link_left">
+			<ul>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Delivery</a></li>
+				<li><a href="#">Legal</a></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--reg Modal-->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<h6 class="reg_h" id="name_h6">Registration</h6>
+      	<a id="btn_close" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="#" class="form" id="form_reg">
+			<p>Login</p><br>
+			<input type="text" name="login" id="login" class="login" placeholder="login">
+			<p>Email</p><br>
+			<input type="text" name="email" id="email" class="email" placeholder="email">
+			<p>Password</p><br>
+			<input type="password" name="password" id="pswd" class="password" placeholder="password">
+			<p>Confirm password</p><br>
+			<input type="password" name="a_password" id="a_password" class="a_password" placeholder="password"><br>
+			<button type="submit" id="button" class="form_submit">Sign up</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end reg modal-->
+
+
+
+<!-- Modal log-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 id="name_h6">Log in</h6>
+        <a class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      
+      <form action="#" method="#" class="form" id="form_log">
+		<p>Login</p><br>
+		<input type="text" name="login" id="login" class="login" placeholder="login">
+		<p>Password</p><br>
+		<input type="password" name="password" id="password" class="password" placeholder="password"><br>
+		<button type="submit" id="button" class="form_submit">Log in</button>
+	</form>
+
+    </div>
+  </div>
+</div>
+<!--end modal log-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--blog nike-->
+<div class="nike_blog">
+	<div class="img_blog">
+		<img src="img/nike_photo.png">
+		<img id="ad_img" src="img/ad_img.png">
+	</div>
+	<div class="text_blog">
+		<h6 id="tb_h6">From $80.00</h6>
+		<h3 id="tb_h3">Nike Air Max</h3>
+		<h5 id="tb_h5">50 Variants</h5>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, maiores!</p>
+		<a href="#">BROWSE VARIANTS</a>
+	</div>
+</div>
+<!--End blog nike-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--blog cros-->
+<div class="cros">
+	<div class="two_blog">
+		<h1>Discover the new</h1>
+		<h2>NIKE KYRIE 3</h2>
+		<center><a href="#">VIEW COLLECTION</a></center>
+		<img src="img/photo_1.jpg">
+	</div>
+	<div class="two_blog">
+		<div class="check_blog">
+			<img id="c_img" src="img/photo_2.png">
+			<div class="cbb">
+				<h6>Chesck out the</h6>
+				<h5>NEW ARRIVALS</h5>
+				<a href="#">DISCOVER</a>
+			</div>
+		</div>
+		<div class="flex_blog">
+			<div class="in_flex">
+				<h6>Best for</h6>
+				<h5>ATHLESTS</h5>
+				<img src="img/photo_3.jpg">
+			</div>
+			<div id="right" class="in_flex">
+				<h6>Feel</h6>
+				<h5>PREMIUM</h5>
+				<img src="img/photo_4.png">
+			</div>
+		</div>
+	</div>
+</div>
+<!--End blog nike-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--nlog cata-->
+<div>
+
+  <!-- Навигационные вкладки -->  
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#new" aria-controls="new" role="tab" data-toggle="tab">NEW</a></li>
+    <li role="presentation"><a href="#popular" aria-controls="popular" role="tab" data-toggle="tab">POPULAR</a></li>
+    <li role="presentation"><a href="#top_pick" aria-controls="top_pick" role="tab" data-toggle="tab">TOP PICKS</a></li>
+  </ul>
+
+  <!-- Вкладки панелей -->   
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="new">
+    	<div class="flex_blog_cata">
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount.jpg">
+    				<img id="img_cros" src="img/cros_1.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_2.jpg">
+    				<h2>Men / Women</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount.jpg">
+    				<img id="img_cros" src="img/cros_3.jpg">
+    				<h2>Women</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_4.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="flex_blog_cata">
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_5.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount_2.jpg">
+    				<img id="img_cros" src="img/cros_6.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_7.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_8.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div role="tabpanel" class="tab-pane fade" id="popular">
+    	<div class="flex_blog_cata">
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_8.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount.jpg">
+    				<img id="img_cros" src="img/cros_7.jpg">
+    				<h2>Men / Women</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_6.jpg">
+    				<h2>Women</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_5.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="flex_blog_cata">
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount_2.jpg">
+    				<img id="img_cros" src="img/cros_4.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_3.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_2.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount_2.jpg">
+    				<img id="img_cros" src="img/cros_1.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div role="tabpanel" class="tab-pane fade" id="top_pick">
+    	<div class="flex_blog_cata">
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount_2.jpg">
+    				<img id="img_cros" src="img/cros_5.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount.jpg">
+    				<img id="img_cros" src="img/cros_6.jpg">
+    				<h2>Men / Women</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_8.jpg">
+    				<h2>Women</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_7.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="flex_blog_cata">
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="discount" src="img/discount.jpg">
+    				<img id="img_cros" src="img/cros_1.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_3.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    		<div class="min_flex">
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_4.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    			<div class="ctos">
+    				<a id="icons" href="#"><i class="fas fa-search-plus"></i></a>
+    				<a id="icons" href="#"><i class="fas fa-cart-arrow-down"></i></a>
+    				<h1>$45.00</h1>
+    				<img id="img_cros" src="img/cros_2.jpg">
+    				<h2>Men</h2>
+    				<p>Lorem ipsum dolor sit amet</p>
+    				<h6>#16373271</h6>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>
+<!--end blog cata-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--blog brand-->
+<!-- <div class="brand">
+	<ul>
+		<div class="bb1">
+			<li><img src="img/brand_1.png"></li>
+			<li><img src="img/brand_2.png"></li>
+			<li><img src="img/brand_3.png"></li>
+		</div>
+		
+		<div class="bb2">
+			<li><img src="img/brand_4.png"></li>
+			<li><img src="img/brand_5.png"></li>
+			<li><img src="img/brand_6.png"></li>
+		</div>
+	</ul>
+</div> -->
+
+<div class="slick">
+    <div class="slide"><img src="img/brand_1.png"></div>
+    <div class="slide"><img src="img/brand_2.png"></div>
+    <div class="slide"><img src="img/brand_3.png"></div>
+    <div class="slide"><img src="img/brand_4.png"></div>
+    <div class="slide"><img src="img/brand_5.png"></div>
+    <div class="slide"><img src="img/brand_6.png"></div>
+    <div class="slide"><img src="img/brand_1.png"></div>
+    <div class="slide"><img src="img/brand_2.png"></div>
+    <div class="slide"><img src="img/brand_3.png"></div>
+    <div class="slide"><img src="img/brand_4.png"></div>
+    <div class="slide"><img src="img/brand_5.png"></div>
+    <div class="slide"><img src="img/brand_6.png"></div>
+</div>
+<!--end blog brand-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--blog client-->
+<div class="client">
+	  
+  <ul class="nav nav-tabs" id="client_ul" role="tablist">
+    <li class="client_li" role="presentation">
+    	<a href="#home" id="name_client" aria-controls="home" role="tab" data-toggle="tab">
+            <img id="client_photo" src="img/client_1.png"><br>
+            Christopher Atkins<br>
+            <img id="star" src="img/5stars.png" alt="">
+        </a>
+    </li>
+
+    <li class="client_li client_active" role="presentation" class="active">
+    	<a href="#profile" id="name_client" aria-controls="profile" role="tab" data-toggle="tab">
+            <img id="client_photo" src="img/client_2.png"><br>
+            Andrew Ferraccioli<br>
+            <img id="star" src="img/4stars.png" alt="">
+        </a>
+    </li>
+
+    <li class="client_li" role="presentation">
+    	<a href="#messages" id="name_client" aria-controls="messages" role="tab" data-toggle="tab">
+            <img id="client_photo" src="img/client_3.jpg"><br>
+            Sandra Jensen<br>
+            <img id="star" src="img/3stars.png" alt="">
+        </a>
+    </li>
+  </ul>
+
+   
+  <div class="tab-content" id="tab_con">
+    <div role="tabpanel" class="tab-pane fade" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nihil aperiam ducimus animi voluptates consequatur optio eaque tempora, pariatur reprehenderit consectetur quam, quos delectus magni esse quae doloribus ipsa, vero laboriosam. Reprehenderit ex fugit, eveniet modi minus doloremque tenetur saepe nobis corporis. Corrupti, temporibus architecto odio doloremque cum repudiandae. Ipsum cupiditate, rem eaque, quae adipisci repudiandae quasi blanditiis esse, ad sunt ducimus, velit! Vero nihil saepe, accusantium natus alias aut voluptatum inventore officiis fugiat facilis quam itaque dicta eaque incidunt, ad laborum aspernatur neque numquam aliquam a quae.</div>
+    <div role="tabpanel" class="tab-pane fade active" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam maxime necessitatibus asperiores doloribus neque debitis modi architecto, voluptates, nostrum, quis voluptas sed. Est blanditiis dolores rerum repudiandae ab repellendus, asperiores ipsam. Sint aspernatur commodi consequuntur neque nam asperiores quas amet voluptatem dolores dolorem eveniet nostrum, architecto nobis magnam quod ad tenetur odit accusamus cupiditate consequatur ut placeat officia molestiae. Beatae optio, qui modi explicabo commodi eos! Maiores numquam nihil aliquid eius qui.</div>
+    <div role="tabpanel" class="tab-pane fade" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum soluta perspiciatis asperiores quasi repellat id facere eius quod praesentium laboriosam sit dicta dolorum consectetur voluptatum alias, in nesciunt debitis distinctio consequatur. Sint cupiditate nulla nam aperiam earum debitis amet deserunt blanditiis. Debitis aspernatur praesentium voluptatibus totam ab sint, temporibus sequi eaque vel nemo ut placeat consequuntur, unde perferendis molestias! Unde soluta eveniet minus maxime.</div>
+  </div>
+</div>
+<!--end blog client-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--blog news-->
+<div class="news">
+	<h4>LATEST NEWS</h4>
+	<ul>
+		<li>
+			<img src="img/new_1.jpg">
+			<h5>DEC 27,2017</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<h6><i class="fas fa-comments"></i> 24 Comments</h6>
+		</li>
+		<li>
+			<img src="img/new_2.jpg">
+			<h5>DEC 27,2017</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<h6><i class="fas fa-comments"></i> 24 Comments</h6>
+		</li>
+		<li>
+			<img src="img/new_3.jpg">
+			<h5>DEC 27,2017</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<h6><i class="fas fa-comments"></i> 24 Comments</h6>
+		</li>
+	</ul>
+</div>
+<!--end blog news-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--blog help-->
+<div class="help">
+	<i class="far fa-envelope"></i>
+	<h3>LOOKING FOR HELP?</h3>
+	<p>Have any questions or need help with order? Let us know!</p>
+	<a href="#">MAKE ANY INQUIRY</a>
+</div>
+<!--end blog help-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<footer>
+	<div class="div">
+		<ul class="blogicons">
+			<li>
+				<i class="fas fa-box-open"></i>
+				<p>Free Shopping in Europe</p>
+			</li>
+
+			<li>
+				<i class="fas fa-hand-holding-usd"></i>
+				<p>Money Back Guarantee</p>
+			</li>
+
+			<li>
+				<i class="far fa-clock"></i>
+				<i class="fas fa-phone"></i>
+				<p>24/7 Customer Support</p>
+			</li>
+		</ul>
+		
+		<ul id="two_bg" class="blogicons">
+			<li>
+				<i class="fas fa-dollar-sign"></i>
+				<p>Lowest Prices Graunteed</p>
+			</li>
+
+			<li>
+				<i class="fas fa-parachute-box"></i>
+				<p>Exclusive Items for Sportshold</p>
+			</li>
+
+			<li>
+				<i class="fas fa-truck-moving"></i>
+				<p id="clock_phone">5-Day Delivery in Europe</p>
+			</li>
+		</ul>
+	</div>
+
+
+	<ul class="some_foot">
+		<div class="info">
+			<ul>
+				<li>
+					<i class="fas fa-phone-volume"></i>
+					<h6>CALL US</h6>
+					<p><a href="tel:+012345678900">0(1234) 567 89 00</a></p>
+				</li>
+				<li>
+					<i class="fas fa-at"></i>
+					<h6>EMAIL US</h6>
+					<p>help@sportshold.com</p>
+				</li>
+				<li>
+					<i class="fas fa-map-marker-alt"></i>
+					<h6>ADDRESS</h6>
+					<p>40 Baria Street 133/2. NY. US</p>
+				</li>
+			</ul>
+		</div>
+
+		
+		<div class="div_menu_foot">
+			<div class="div_mm_foot">
+				<div class="foot_menu">
+					<ul>
+						<li><h5>NAVIGATION</h5></li>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Latest News</a></li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Brands</a></li>
+					</ul>
+				</div>
+
+				<div class="foot_menu">
+					<ul>
+						<li><h5>CATEGORIES</h5></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Children</a></li>
+						<li><a href="#">Baby</a></li>
+						<li><a href="#">Accessories</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="div_mm_foot">
+				<div class="foot_menu">
+					<ul>
+						<li><h5>SALES</h5></li>
+						<li><a href="#">New Arrvals</a></li>
+						<li><a href="#">Most Popular</a></li>
+						<li><a href="#">Top Picks</a></li>
+						<li><a href="#">Outlet</a></li>
+					</ul>
+				</div>
+
+				<div class="foot_menu">
+					<ul>
+						<li><h5>SUPPORT</h5></li>
+						<li><a href="#">Shopping & Delivery</a></li>
+						<li><a href="#">Return Policy</a></li>
+						<li><a href="#">Teams of Service</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</ul>
+	<div class="blog_copy">
+		<a href="https://amir-web.github.io/works/third_work/sportshold.html" class="logotype"><center><img id="foot_logo" src="img/logotype.png"></center></a>
+
+		<p>&copy; 2017 Sportshold. All rights reserved</p>
+
+		<ul id="icon_sot">
+			<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+			<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+		</ul>
+	</div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="jquery-validation-1.17.0/dist/jquery.validate.min.js"></script>
+<script src="bootstrap-4.1.1-dist/js/bootstrap.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
